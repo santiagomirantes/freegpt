@@ -1,5 +1,5 @@
 <h1>FREEGPT</h1>
-<img style="width:10vw;" src="https://i.ibb.co/kqkwx1h/Pics-Art-12-01-04-58-04.png">
+<img style="width:150px;" src="https://i.ibb.co/kqkwx1h/Pics-Art-12-01-04-58-04.png">
 <h2>Introduction</h2>
 <p>FREEGPT is a <b>JavaScript</b> library made for educational purposes that allows any user to include OpenAI's CHAT-GPT model in their website.</p>
 <p>The creator of this library is not responsible for any innapropiate or illegal use of this library, since this project is made to educate about the possibilities of including an AI model into a website.</p>
