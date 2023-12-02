@@ -5,6 +5,15 @@
 <p>The creator of this library is not responsible for any innapropiate or illegal use of this library, since this project is made to educate about the possibilities of including an AI model into a website.</p>
 <p style="color:red" alt="FREEGPT logo" title="FREEGPT logo"><b>NOTE:</b> The project will be removed if any legal restriction is presented.</p>
 
+<h2>Installation</h2>
+
+<p>To include the library in your website just download the script and insert it by using a <code>script</code> tag. For example:</p>
+<code>
+  <script src="FREEGPT.js"></script>
+</code>
+
+[Download the file](https://github.com/santiagomirantes/freegpt/blob/main/FREEGPT.js)
+
 <h2 id="usage">Usage</h2>
 
 <p>To start making request with FREEGPT you only have to know one function: <code>FREEGPT.talk()</code>. The syntax is the following:</p>
