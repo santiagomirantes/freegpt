@@ -8,9 +8,7 @@
 <h2>Installation</h2>
 
 <p>To include the library in your website just download the script and insert it by using a <code>script</code> tag. For example:</p>
-<code>
-  <script src="FREEGPT.js"></script>
-</code>
+<code><script src="FREEGPT.js"></script></code>
 
 [Download the file](https://github.com/santiagomirantes/freegpt/blob/main/FREEGPT.js)
 
@@ -32,8 +30,7 @@
 
 <p>Just like:</p>
 
-<code>
-  FREEGPT.talk("Hello!").then(res => {
+<code>FREEGPT.talk("Hello!").then(res => {
     console.log(res)
 })
 </code>
@@ -41,14 +38,15 @@
 <h3>Obtaining the answer via async/await</h3>
 
 <p>Just like:</p>
-<code>
-  async function interact(q) {
+<code>async function interact(q) {
    let request = await FREEGPT.talk(q)
    console.log(request)
 }
 
 interact("Make me a list of 10 colors")
 </code>
+
+<p>If the request is rejected, the promise will return undefined and log an error message.</p>
 
 <h2>License</h2>
 
