@@ -8,21 +8,76 @@
 <h2>Installation</h2>
 
 <p>To include the library in your website just download the script and insert it by using a <code>script</code> tag. For example:</p>
-<code><script src="FREEGPT.js"></script></code>
+
+```html
+<script src="FREEGPT.js"></script>
+```
 
 [Download the file](https://github.com/santiagomirantes/freegpt/blob/main/FREEGPT.js)
 
 <h2 id="usage">Usage</h2>
 
 <p>To start making request with FREEGPT you only have to know one function: <code>FREEGPT.talk()</code>. The syntax is the following:</p>
-<code>FREEGPT.talk(query,model)</code>
+
+```js
+FREEGPT.talk(query,model)
+```
 <p>Here is a list of the parameters with their due usage:</p>
 
 <ul>
   <li><b>query:</b> is the message you want to give to ChatGPT. Example: <i>Tell me one country that starts with the letter A.</i></li>
-  <li><b>model (optional):</b> is the number of the API you want to use. Right now FREEGPT only has one API but where are looking forward to add more. This field must be a number and the default model is 1.</li>
+  <li><b>model (optional):</b> is the number of the API you want to use. Right now FREEGPT has two models (see table below) but i´m looking forward to add more. This field must be a number and the default model is 1.</li>
   
 </ul>
+
+<h3>Models table:</h3>
+
+<table>
+  <tr>
+    <td></td>
+    <td>Chatbot ji1z</td>
+    <td>ChatGPT spanish (works in other languages)</td>
+  </tr>
+  <tr>
+    <td>Model ID</td>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Current state</td>
+    <td>Working</td>
+    <td>Working</td>
+  </tr>
+  <tr>
+    <td>GPT</td>
+    <td>3.5</td>
+    <td>3.5</td>
+  </tr>
+  <tr>
+    <td>Restrictions</td>
+    <td>Open AI terms</td>
+    <td>Open AI terms</td>
+  </tr>
+  <tr>
+    <td>Generations limit</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Use of proxies</td>
+    <td>No</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+<p><b>Note:</b> FREEGPT works with two proxies, if one of them doesn´t work you can use the other by changing the <code>FREEGPT.proxyUsed</code> property to <code>1</code>.
+To check which proxies are working execute the <code>FREEGPT.tryProxies()</code> integrated function like this:</p>
+
+```js
+FREEGPT.tryProxies(/*some url*/,0)
+```
+
+<p>This function will update the <code>FREEGPT.proxyUsed</code> property automatically.</p>
 
 <p>The <code>talk</code> function returns a promise which you can handle by multiple methods. Two possible methods to handle it are:</p>
 
@@ -30,23 +85,28 @@
 
 <p>Just like:</p>
 
-<code>FREEGPT.talk("Hello!").then(res => {
+```js
+FREEGPT.talk("Hello!",1).then(res => {
     console.log(res)
 })
-</code>
+```
 
 <h3>Obtaining the answer via async/await</h3>
 
 <p>Just like:</p>
-<code>async function interact(q) {
-   let request = await FREEGPT.talk(q)
+
+```js
+async function interact(q) {
+   let request = await FREEGPT.talk(q,2)
    console.log(request)
 }
 
 interact("Make me a list of 10 colors")
-</code>
+```
 
-<p>If the request is rejected, the promise will return undefined and log an error message.</p>
+
+<p>If the request is rejected, the promise will return <code>undefined</code> and log an error message.</p>
+
 
 <h2>License</h2>
 
